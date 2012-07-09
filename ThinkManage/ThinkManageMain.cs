@@ -17,5 +17,10 @@ namespace ThinkManage
         {
             InitializeComponent();
         }
+
+        private void toolTabStrip3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace ThinkManage
         {
 
         }
+
+        private void radMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

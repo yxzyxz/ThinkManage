@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ThinkManageMain.resx">
       <DependentUpon>ThinkManageMain.cs</DependentUpon>
@@ -94,6 +95,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\bug-logo.png" />
+    <Content Include="Resources\ControlDefault.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\load-layout.png" />
+    <Content Include="Resources\Load.png" />
+    <Content Include="Resources\Office2010Black.png" />
+    <Content Include="Resources\Office2010Blue.png" />
+    <Content Include="Resources\Office2010Silver.png" />
+    <Content Include="Resources\Remove.png" />
+    <Content Include="Resources\Save-Layout.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Sort A to Z.png" />
+    <Content Include="Resources\Telerik.png" />
+    <Content Include="Resources\Window Bring Front.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

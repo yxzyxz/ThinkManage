@@ -117,21 +117,86 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="documentContainer1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="documentWindow1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radStatusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radDock1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="documentWindow4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radSplitContainer1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="documentContainer2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="documentWindow3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPageView1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPageView1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPageViewPage1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPageViewPage2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radPageViewPage3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="radRibbonBar2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="radRibbonBar1.StartButtonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="projectsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
-        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsOAAALDgFAvuFBAAACLklE
-        QVRYR+2X3ysEURTH5y9Aa3/P7g7G7tplf5dfK+tHKCIvXniXF3+CP8Kz8uLBk5AotcWTkiRKkfKolCSl
-        lHLMuZzbWHN3Yob1sA+3Zu/MPfOZ7znfc+9KACBVelQcAAWoQlAZVJUwVWLv6lWi0Tc6BUo4BmsHN3xO
-        f9/oOtPVB2o8BcWLF75G5EJhOihw/9gU1DgcbLjlIOycPZqCZLr7+ZqGSAwo1o8goskcC+b0+SGW6eAg
-        W8f3QhBUANf4lUZoiMbZtU+73ji6E36w8IYaT/Jg9NJ0V+EdxB8wTA0BeAIhWD+8ZaA9w5NsjcPj0YQw
-        boxCCKwBuVH9In+yvYcFdWkg+tTk8oNsXg9AaWgvjLD5b0OUK7xUZy9XZHn7VMrmB9hvb0iBnZMHYaps
-        hUBAkr7O6eQKmLnHdggEcflk7oLV/WtT19gOQTYkJbxBBcq5BqFtheAu+HhxUyzBFAmqEd4TjGrKNghS
-        QO+C3fMnCQEQpLk1JQSxDIHtl1yB0hu5IKRGGQi2awQrVcMyRH5o4qM/yKz7iSyshFvYc9htS1u8ZYjx
-        6VkWvM7lgqXNYyEEqRFJZKF4/vzpOcsQ+OUE4pa1bmnQlKguwm1pw7qwBeITiNa29ZaM5zqZUugUUaps
-        gyhVBAuQHKPftn/VohScUlNbX8+3eCNH6GFsVYICT8zM8R21nGMsHWrMjnB4f35hEVaKl6b7xo/a9l/+
-        K6se+U2P/NV0/KUC/yodbyc0el1h8kJcAAAAAElFTkSuQmCC
+        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
+        gg==
 </value>
   </data>
   <data name="detailsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -224,4 +289,28 @@
         C4DDFkHoXsu+AT0Xy2YJbPgqAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="toolWindow2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolWindow6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="documentWindow2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

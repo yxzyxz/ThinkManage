@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="ThinkManageEntitiesModel" namespace="ThinkManage" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="ThinkManageEntitiesModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="ThinkManage" default="true">
+      <orm:class name="Category" uniqueId="f2c20c51-4185-424e-b33b-cb630d4b25bb">
+        <orm:table name="category" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:field name="_categoryName" property="CategoryName" uniqueId="d74180db-7946-4ac0-99aa-04cb8de76ae9" type="System.String">
+          <orm:column name="category_name" sql-type="varchar" nullable="true" length="255" scale="0" converter="OpenAccessRuntime.Data.VariableLengthStringConverter" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="_id" property="Id" uniqueId="e17466e8-bffe-49d9-a961-d7d874398aee" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" converter="OpenAccessRuntime.Data.IntConverter" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_pId" property="PId" uniqueId="22d47a29-17e9-46ae-9b9a-9005756e4f1a" type="System.Int32">
+          <orm:column name="p_id" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" uniqueId="80947a8e-4b3c-4758-9f15-7284bd80557d" type="System.DateTime">
+          <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_thinkContents" property="ThinkContents" behavior="readwrite" uniqueId="b3c2457c-871f-4739-bf71-ee94534cf1e0" type="ThinkManage.ThinkContents">
+          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_category" order-by="" uniqueId="ec689dad-9c06-4a21-b99e-34104a49430f" />
+        </orm:field>
+        <orm:index name="idx_category_id2">
+          <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:index>
+      </orm:class>
+      <orm:class name="Tag" use-default-mapping="true" uniqueId="db5669a8-ce33-46a1-a639-c464c223bb9e">
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:field name="_id" property="Id" uniqueId="3d5689c0-dcb4-4e58-bb64-7fd46a0c1168" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" converter="OpenAccessRuntime.Data.IntConverter" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_tagName" property="TagName" uniqueId="6b22d1f9-6c88-44ff-ab75-953f709dab2e" type="System.String">
+          <orm:column name="tag_name" sql-type="varchar" nullable="true" length="255" scale="0" converter="OpenAccessRuntime.Data.VariableLengthStringConverter" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" uniqueId="d0a32290-a135-4f7b-a4ab-b8c4edbae305" type="System.DateTime">
+          <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_thinkContents" property="ThinkContents" behavior="readwrite" uniqueId="3551e330-80c0-43a7-ad6d-b1bfedaac56c" type="ThinkManage.ThinkContents">
+          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_tag" order-by="" uniqueId="b2bd4f4c-ca26-4af5-8b43-6254be9bb550" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="ThinkContents" uniqueId="47aa9435-240c-49e7-96af-5c2731c97280">
+        <orm:table name="think_contents" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:field name="_id" property="Id" uniqueId="4da8cf5e-4022-4c42-8578-6e2793456bc4" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" converter="OpenAccessRuntime.Data.IntConverter" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_categoryId" property="CategoryId" uniqueId="f59b3d37-5886-4ea2-9fe7-5bd3334e05de" type="System.Int32">
+          <orm:column name="category_id" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_tagId" property="TagId" uniqueId="30fbbfec-6b61-4f3c-be10-0dc868a3fa76" type="System.Int32">
+          <orm:column name="tag" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_thinkContent" property="ThinkContent" uniqueId="436cd4ed-613d-400b-884d-ab63091e4c3e" type="System.String">
+          <orm:column name="think_content" sql-type="varchar" nullable="true" length="255" scale="0" converter="OpenAccessRuntime.Data.VariableLengthStringConverter" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="_dateCreated" property="DateCreated" uniqueId="86d0cef3-27bf-4df1-bed4-c5d240060d51" type="System.DateTime">
+          <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_tag" property="Tag" behavior="readwrite" uniqueId="17193718-11b9-467e-8fd6-799e3480ff76" type="ThinkManage.Tag">
+          <orm:reference uniqueId="b2bd4f4c-ca26-4af5-8b43-6254be9bb550">
+            <orm:sharedfield name="_tagId" target-class="ThinkManage.Tag" target-field="_id" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_category" property="Category" behavior="readwrite" uniqueId="fd394463-7fd8-4ab6-8c9c-7a849233cc26" type="ThinkManage.Category">
+          <orm:reference uniqueId="ec689dad-9c06-4a21-b99e-34104a49430f">
+            <orm:sharedfield name="_categoryId" target-class="ThinkManage.Category" target-field="_id" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="think_contents">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" converter="OpenAccessRuntime.Data.IntConverter" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="category_id" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        <orm:column name="tag" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        <orm:column name="think_content" sql-type="varchar" nullable="true" length="255" scale="0" converter="OpenAccessRuntime.Data.VariableLengthStringConverter" ado-type="Varchar" />
+        <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
+      </orm:table>
+      <orm:table name="category">
+        <orm:column name="category_name" sql-type="varchar" nullable="true" length="255" scale="0" converter="OpenAccessRuntime.Data.VariableLengthStringConverter" ado-type="Varchar" />
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" converter="OpenAccessRuntime.Data.IntConverter" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="p_id" sql-type="int" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
+        <orm:index name="idx_category_id2">
+          <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <SaveConnectionStringInAppConfig>false</SaveConnectionStringInAppConfig>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>mssql</Backend>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="f2c20c51-4185-424e-b33b-cb630d4b25bb" name="Category" namespace="ThinkManage" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="d74180db-7946-4ac0-99aa-04cb8de76ae9" name="CategoryName" label="CategoryName : String" />
+      <Property Id="e17466e8-bffe-49d9-a961-d7d874398aee" name="Id" type="int" label="Id : int" identity="true" />
+      <Property Id="22d47a29-17e9-46ae-9b9a-9005756e4f1a" name="PId" type="int" label="PId : int" />
+      <Property Id="80947a8e-4b3c-4758-9f15-7284bd80557d" name="DateCreated" type="DateTime" label="DateCreated : DateTime" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="a322f6b7-ae57-44b1-a3ad-820f80023056">
+          <NavigationalProperty Id="b3c2457c-871f-4739-bf71-ee94534cf1e0" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="db5669a8-ce33-46a1-a639-c464c223bb9e" name="Tag" namespace="ThinkManage" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="3d5689c0-dcb4-4e58-bb64-7fd46a0c1168" name="Id" type="int" label="Id : int" identity="true" />
+      <Property Id="6b22d1f9-6c88-44ff-ab75-953f709dab2e" name="TagName" label="TagName : String" />
+      <Property Id="d0a32290-a135-4f7b-a4ab-b8c4edbae305" name="DateCreated" type="DateTime" label="DateCreated : DateTime" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="afba728e-7afc-4bf3-a64e-68261d9bc117">
+          <NavigationalProperty Id="3551e330-80c0-43a7-ad6d-b1bfedaac56c" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="47aa9435-240c-49e7-96af-5c2731c97280" name="ThinkContents" namespace="ThinkManage" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="4da8cf5e-4022-4c42-8578-6e2793456bc4" name="Id" type="int" label="Id : int" identity="true" />
+      <Property Id="f59b3d37-5886-4ea2-9fe7-5bd3334e05de" name="CategoryId" type="int" label="CategoryId : int" />
+      <Property Id="30fbbfec-6b61-4f3c-be10-0dc868a3fa76" name="TagId" type="int" label="TagId : int" />
+      <Property Id="436cd4ed-613d-400b-884d-ab63091e4c3e" name="ThinkContent" label="ThinkContent : String" />
+      <Property Id="86d0cef3-27bf-4df1-bed4-c5d240060d51" name="DateCreated" type="DateTime" label="DateCreated : DateTime" />
+      <AssociationTargets>
+        <Association Id="b2bd4f4c-ca26-4af5-8b43-6254be9bb550" SourceMultiplicity="ZeroOne" name="ThinkContentsHasTag">
+          <DomainClassMoniker name="/ThinkManageEntitiesModel/Tag" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="f0893ed2-5b36-4a5c-9858-aafd51491c9c">
+              <NavigationalPropertyMoniker name="/ThinkManageEntitiesModel/Tag/ThinkContents" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="b6c7ff34-84da-477a-a43e-2419e271ee61">
+              <NavigationalPropertyMoniker name="/ThinkManageEntitiesModel/ThinkContents/Tag" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="ec689dad-9c06-4a21-b99e-34104a49430f" SourceMultiplicity="ZeroOne" name="ThinkContentsHasCategory">
+          <DomainClassMoniker name="/ThinkManageEntitiesModel/Category" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="e1be96ca-943f-45db-9938-bf43c9530bc3">
+              <NavigationalPropertyMoniker name="/ThinkManageEntitiesModel/Category/ThinkContents" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="8a950254-7474-47cb-9048-bd89caa79f76">
+              <NavigationalPropertyMoniker name="/ThinkManageEntitiesModel/ThinkContents/Category" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="6cb4e1cb-87ab-40bf-a834-0efc75f07aed">
+          <NavigationalProperty Id="17193718-11b9-467e-8fd6-799e3480ff76" name="Tag" type="Tag" label="Tag : Tag" nullable="true" kind="Persistent" fieldName="_tag" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="2920f882-8cef-4740-9547-9b3d96d21835">
+          <NavigationalProperty Id="fd394463-7fd8-4ab6-8c9c-7a849233cc26" name="Category" type="Category" label="Category : Category" nullable="true" kind="Persistent" fieldName="_category" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="f94dca9f-ba77-4839-9e27-23d5d54ad1de">
+      <domainContainer name="ThinkManageEntitiesModel" namespace="ThinkManage" showPropertiesCompartment="true">
+        <entitySetProperty name="Categories" namespace="ThinkManage" type="Category" label="Categories : IQueryable&lt;ThinkManage.Category&gt;" />
+        <entitySetProperty name="Tags" namespace="ThinkManage" type="Tag" label="Tags : IQueryable&lt;ThinkManage.Tag&gt;" />
+        <entitySetProperty name="ThinkContents" namespace="ThinkManage" type="ThinkContents" label="ThinkContents : IQueryable&lt;ThinkManage.ThinkContents&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

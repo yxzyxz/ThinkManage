@@ -17,4 +17,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		ShowOldMenu = False
+		IndexUsingAttrib = False
+		FetchGroupUsingAttrib = True
+		VersionFieldUsingAttrib = True
+	EndGlobalSection
 EndGlobal

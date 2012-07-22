@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Telerik.OpenAccess;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
@@ -13,6 +14,8 @@ namespace ThinkManage
 {
     public partial class ThinkManageMain : RadForm
     {
+
+        //private IObjectScope _scope = Database.Get("App.Config").GetObjectScope();
         public ThinkManageMain()
         {
             InitializeComponent();

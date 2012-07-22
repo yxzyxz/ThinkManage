@@ -24,7 +24,7 @@ namespace ThinkManage
 {
 	public partial class ThinkManageEntitiesModel : OpenAccessContext, IThinkManageEntitiesModelUnitOfWork
 	{
-		private static string connectionStringName = @"";
+		private static string connectionStringName = @"ThinkManageDBConnection";
 			
 		private static BackendConfiguration backend = GetBackendConfiguration();
 		
@@ -79,6 +79,7 @@ namespace ThinkManage
 		{
 			BackendConfiguration backend = new BackendConfiguration();
 			backend.Backend = "mssql";
+			backend.ProviderName = "System.Data.SqlClient";
 			return backend;
 		}
 	}

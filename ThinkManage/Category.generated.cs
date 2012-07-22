@@ -76,6 +76,19 @@ namespace ThinkManage
 		    }
 		}
 		
+		private int _id2;
+		public virtual int Id2 
+		{ 
+		    get
+		    {
+		        return this._id2;
+		    }
+		    set
+		    {
+		        this._id2 = value;
+		    }
+		}
+		
 		private IList<ThinkContents> _thinkContents = new List<ThinkContents>();
 		public virtual IList<ThinkContents> ThinkContents 
 		{ 

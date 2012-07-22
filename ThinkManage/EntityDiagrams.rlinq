@@ -20,6 +20,9 @@
         <orm:field name="_dateCreated" property="DateCreated" uniqueId="80947a8e-4b3c-4758-9f15-7284bd80557d" type="System.DateTime">
           <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
         </orm:field>
+        <orm:field name="_id2" property="Id2" uniqueId="05bdbc64-9da4-44ad-81c0-d4d45451f157" type="System.Int32">
+          <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
+        </orm:field>
         <orm:field name="_thinkContents" property="ThinkContents" behavior="readwrite" uniqueId="b3c2457c-871f-4739-bf71-ee94534cf1e0" type="ThinkManage.ThinkContents">
           <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_category" order-by="" uniqueId="ec689dad-9c06-4a21-b99e-34104a49430f" />
         </orm:field>
@@ -99,7 +102,8 @@
     </orm:schema>
   </orm:orm>
   <ModelSettings xmlns="">
-    <SaveConnectionStringInAppConfig>false</SaveConnectionStringInAppConfig>
+    <AppConfigConnectionPropertyName>ThinkManageDBConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=(local);initial catalog=ThinkManageDB;integrated security=True</AppConfigConnectionString>
     <NamingSettings>
       <ClassRules>
         <CaseMode>PascalCase</CaseMode>
@@ -116,10 +120,14 @@
     <CodeGenerationSettings>
       <MappingDefinitionType>Xml</MappingDefinitionType>
     </CodeGenerationSettings>
-    <SchemaUpdateSettings />
+    <SchemaUpdateSettings>
+      <ExecuteScript>true</ExecuteScript>
+      <DeploymentProject>ThinkManage</DeploymentProject>
+    </SchemaUpdateSettings>
     <BackendConfigurationSettings>
       <BackendConfiguration>
         <Backend>mssql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
       </BackendConfiguration>
     </BackendConfigurationSettings>
   </ModelSettings>
@@ -129,6 +137,7 @@
       <Property Id="e17466e8-bffe-49d9-a961-d7d874398aee" name="Id" type="int" label="Id : int" identity="true" />
       <Property Id="22d47a29-17e9-46ae-9b9a-9005756e4f1a" name="PId" type="int" label="PId : int" />
       <Property Id="80947a8e-4b3c-4758-9f15-7284bd80557d" name="DateCreated" type="DateTime" label="DateCreated : DateTime" />
+      <Property Id="05bdbc64-9da4-44ad-81c0-d4d45451f157" name="Id2" type="int" label="Id2 : int" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="a322f6b7-ae57-44b1-a3ad-820f80023056">
           <NavigationalProperty Id="b3c2457c-871f-4739-bf71-ee94534cf1e0" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="false" />

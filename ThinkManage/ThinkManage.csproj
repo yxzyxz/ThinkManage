@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.OpenAccess, Version=2012.1.301.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
     <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2012.1.301.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.OpenAccess.Windows, Version=2012.1.301.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls, Version=2012.1.301.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.GridView, Version=2012.1.301.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.RadChart, Version=2012.1.301.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -106,6 +107,7 @@
       <Generator>MetaModelCodeGenerator</Generator>
       <LastGenOutput>EntityDiagrams.cs</LastGenOutput>
     </OpenAccessDeploy>
+    <None Include="App.Config" />
     <None Include="EntityDiagrams.rlinq.diagram">
       <DependentUpon>EntityDiagrams.rlinq</DependentUpon>
     </None>
@@ -135,6 +137,7 @@
     <Content Include="Resources\Sort A to Z.png" />
     <Content Include="Resources\Telerik.png" />
     <Content Include="Resources\Window Bring Front.png" />
+    <Content Include="ThinkManageDBConnection%282012-07-22 03-16-41%29.rlinq.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

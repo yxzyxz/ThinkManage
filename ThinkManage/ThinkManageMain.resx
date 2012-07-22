@@ -150,6 +150,15 @@
   <metadata name="toolWindow7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="objectView1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>161, 17</value>
+  </metadata>
+  <metadata name="objectProvider1.HelperTypeName" xml:space="preserve">
+    <value>ThinkManage.ThinkManageEntitiesModel, ThinkManage</value>
+  </metadata>
+  <metadata name="objectProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="radSplitContainer1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -169,7 +178,7 @@
   <data name="projectsButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAVySURBVFhH1VZJT2NHEOYCvwoJwnIAxZHgACLMKUgglgsH
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAVySURBVFhH1VZJT2NHEOYCvwoJwnIAxZHgACLMKUgglgsH
         5gKTMEgZKWaRhpgAo7EdlmGTYPABJHyDCwgOcwknNgUG79vzviDV1Fft5xgbxnoSl1gq9evN/XV1fV9V
         VVWF3/Ly8j+Li4s0NTVFMzMzhm16eposFgstLS3R/v7+l0rnlc0zgNjC/DzNL7ChLf3Wx0rm+vv76eTk
         hHp7e+n8/JwGBgZof2+PDAPY2dnRzGYzTU+pm3y0WmltbY12d3fpwOmkw8NDOj4+odPTU7FjPvTo6JCc

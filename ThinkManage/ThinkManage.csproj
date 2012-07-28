@@ -122,6 +122,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataBase\ThinkManageDB.mdf" />
+    <Content Include="DataBase\ThinkManageDB_log.ldf">
+      <DependentUpon>ThinkManageDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Resources\Add.png" />
     <Content Include="Resources\bug-logo.png" />
     <Content Include="Resources\ControlDefault.png" />

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode2 = new Telerik.WinControls.UI.RadTreeNode();
+            Telerik.WinControls.UI.RadTreeNode radTreeNode1 = new Telerik.WinControls.UI.RadTreeNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThinkManageMain));
             this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.documentTabStrip1 = new Telerik.WinControls.UI.Docking.DocumentTabStrip();
@@ -40,8 +40,6 @@
             this.radDock1 = new Telerik.WinControls.UI.Docking.RadDock();
             this.toolWindow7 = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.radTreeView1 = new Telerik.WinControls.UI.RadTreeView();
-            this.objectView1 = new Telerik.OpenAccess.ObjectView(this.components);
-            this.objectProvider1 = new Telerik.OpenAccess.ObjectProvider(this.components);
             this.toolTabStrip4 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
             this.documentContainer2 = new Telerik.WinControls.UI.Docking.DocumentContainer();
@@ -58,7 +56,6 @@
             this.homeTab = new Telerik.WinControls.UI.RibbonTab();
             this.databaseGroup = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.loadDatabaseButton = new Telerik.WinControls.UI.RadButtonElement();
-            this.saveDatabaseButton = new Telerik.WinControls.UI.RadButtonElement();
             this.editGroup = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.addButton = new Telerik.WinControls.UI.RadButtonElement();
             this.removeButton = new Telerik.WinControls.UI.RadButtonElement();
@@ -96,6 +93,14 @@
             this.toolWindow5 = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.toolWindow6 = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.documentWindow2 = new Telerik.WinControls.UI.Docking.DocumentWindow();
+            this.thinkContentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.saveDatabaseButton = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarButtonGroup4 = new Telerik.WinControls.UI.RadRibbonBarButtonGroup();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).BeginInit();
             this.documentContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip1)).BeginInit();
@@ -108,8 +113,6 @@
             this.radDock1.SuspendLayout();
             this.toolWindow7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).BeginInit();
             this.toolTabStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
@@ -124,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,10 +166,10 @@
             // 
             // documentWindow1
             // 
-            this.documentWindow1.Location = new System.Drawing.Point(6, 33);
+            this.documentWindow1.Location = new System.Drawing.Point(6, 37);
             this.documentWindow1.Name = "documentWindow1";
             this.documentWindow1.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument;
-            this.documentWindow1.Size = new System.Drawing.Size(466, 264);
+            this.documentWindow1.Size = new System.Drawing.Size(466, 260);
             this.documentWindow1.Text = "documentWindow2";
             // 
             // radStatusStrip1
@@ -174,7 +178,7 @@
             this.radStatusStrip1.LayoutStyle = Telerik.WinControls.UI.RadStatusBarLayoutStyle.Stack;
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 1062);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1820, 32);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1844, 32);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -198,7 +202,7 @@
             this.radPanel1.EnableTheming = false;
             this.radPanel1.Location = new System.Drawing.Point(0, 187);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(1820, 875);
+            this.radPanel1.Size = new System.Drawing.Size(1844, 875);
             this.radPanel1.TabIndex = 3;
             this.radPanel1.TabStop = false;
             this.radPanel1.Text = "radPanel1";
@@ -221,7 +225,7 @@
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.radDock1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radDock1.Size = new System.Drawing.Size(1820, 875);
+            this.radDock1.Size = new System.Drawing.Size(1844, 875);
             this.radDock1.SplitterWidth = 4;
             this.radDock1.TabIndex = 0;
             this.radDock1.TabStop = false;
@@ -239,33 +243,21 @@
             // 
             // radTreeView1
             // 
-            this.radTreeView1.DataSource = this.objectView1;
+            this.radTreeView1.BackColor = System.Drawing.Color.White;
             this.radTreeView1.DisplayMember = "CategoryName";
             this.radTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radTreeView1.Location = new System.Drawing.Point(0, 0);
             this.radTreeView1.Name = "radTreeView1";
-            radTreeNode2.Name = "CategoryName";
-            radTreeNode2.Text = "CategoryName";
+            radTreeNode1.Name = "CategoryName";
+            radTreeNode1.Text = "CategoryName";
             this.radTreeView1.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode2});
+            radTreeNode1});
             this.radTreeView1.ParentMember = "PId";
             this.radTreeView1.Size = new System.Drawing.Size(310, 833);
             this.radTreeView1.SpacingBetweenNodes = -1;
             this.radTreeView1.TabIndex = 0;
             this.radTreeView1.Text = "radTreeView1";
             this.radTreeView1.ValueMember = "Id";
-            // 
-            // objectView1
-            // 
-            this.objectView1.ObjectProvider = this.objectProvider1;
-            this.objectView1.Position = 0;
-            this.objectView1.RootType = typeof(ThinkManage.Category);
-            // 
-            // objectProvider1
-            // 
-            this.objectProvider1.BaseType = typeof(ThinkManage.Category);
-            this.objectProvider1.ObjectContextProviderTypeName = "ThinkManage.ThinkManageEntitiesModel, ThinkManage";
-            this.objectProvider1.OQLStatement = "SELECT * FROM CategoryExtent AS x";
             // 
             // toolTabStrip4
             // 
@@ -298,7 +290,7 @@
             // 
             this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.radSplitContainer1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radSplitContainer1.Size = new System.Drawing.Size(1494, 865);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1518, 865);
             this.radSplitContainer1.SizeInfo.AbsoluteSize = new System.Drawing.Size(850, 200);
             this.radSplitContainer1.SizeInfo.SplitterCorrection = new System.Drawing.Size(-112, 0);
             this.radSplitContainer1.SplitterWidth = 4;
@@ -317,7 +309,7 @@
             // 
             this.documentContainer2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.documentContainer2.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.documentContainer2.Size = new System.Drawing.Size(1494, 691);
+            this.documentContainer2.Size = new System.Drawing.Size(1518, 691);
             this.documentContainer2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 435);
             this.documentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill;
             this.documentContainer2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 30);
@@ -337,7 +329,7 @@
             // 
             this.documentTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.documentTabStrip2.SelectedIndex = 0;
-            this.documentTabStrip2.Size = new System.Drawing.Size(1494, 691);
+            this.documentTabStrip2.Size = new System.Drawing.Size(1518, 691);
             this.documentTabStrip2.TabIndex = 0;
             this.documentTabStrip2.TabStop = false;
             // 
@@ -346,7 +338,7 @@
             this.documentWindow4.Location = new System.Drawing.Point(6, 37);
             this.documentWindow4.Name = "documentWindow4";
             this.documentWindow4.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument;
-            this.documentWindow4.Size = new System.Drawing.Size(1482, 648);
+            this.documentWindow4.Size = new System.Drawing.Size(1506, 648);
             this.documentWindow4.Text = "documentWindow1";
             // 
             // documentWindow3
@@ -367,7 +359,7 @@
             // 
             this.toolTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.toolTabStrip2.SelectedIndex = 0;
-            this.toolTabStrip2.Size = new System.Drawing.Size(1494, 170);
+            this.toolTabStrip2.Size = new System.Drawing.Size(1518, 170);
             this.toolTabStrip2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 170);
             this.toolTabStrip2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -30);
             this.toolTabStrip2.TabIndex = 1;
@@ -380,7 +372,7 @@
             this.toolWindow8.Location = new System.Drawing.Point(1, 30);
             this.toolWindow8.Name = "toolWindow8";
             this.toolWindow8.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            this.toolWindow8.Size = new System.Drawing.Size(1492, 138);
+            this.toolWindow8.Size = new System.Drawing.Size(1516, 138);
             this.toolWindow8.Text = "toolWindow8";
             // 
             // radPageView1
@@ -392,7 +384,7 @@
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
             this.radPageView1.SelectedPage = this.radPageViewPage3;
-            this.radPageView1.Size = new System.Drawing.Size(1492, 138);
+            this.radPageView1.Size = new System.Drawing.Size(1516, 138);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
             // 
@@ -414,7 +406,7 @@
             // 
             this.radPageViewPage3.Location = new System.Drawing.Point(10, 45);
             this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(1471, 82);
+            this.radPageViewPage3.Size = new System.Drawing.Size(1495, 82);
             this.radPageViewPage3.Text = "radPageViewPage3";
             // 
             // radRibbonBar2
@@ -455,7 +447,7 @@
             // 
             // 
             this.radRibbonBar2.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar2.Size = new System.Drawing.Size(1820, 187);
+            this.radRibbonBar2.Size = new System.Drawing.Size(1844, 187);
             this.radRibbonBar2.StartButtonImage = null;
             this.radRibbonBar2.TabIndex = 1;
             this.radRibbonBar2.Text = "思想管理软件";
@@ -482,8 +474,7 @@
             this.databaseGroup.AccessibleDescription = "Database";
             this.databaseGroup.AccessibleName = "Database";
             this.databaseGroup.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.loadDatabaseButton,
-            this.saveDatabaseButton});
+            this.loadDatabaseButton});
             this.databaseGroup.Margin = new System.Windows.Forms.Padding(0);
             this.databaseGroup.MaxSize = new System.Drawing.Size(0, 0);
             this.databaseGroup.MinSize = new System.Drawing.Size(0, 0);
@@ -504,19 +495,6 @@
             this.loadDatabaseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.loadDatabaseButton.Visibility = Telerik.WinControls.ElementVisibility.Visible;
             // 
-            // saveDatabaseButton
-            // 
-            this.saveDatabaseButton.AccessibleDescription = "Save";
-            this.saveDatabaseButton.AccessibleName = "Save";
-            this.saveDatabaseButton.Class = "RibbonBarButtonElement";
-            this.saveDatabaseButton.Image = global::ThinkManage.Properties.Resources.Save;
-            this.saveDatabaseButton.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.saveDatabaseButton.MinSize = new System.Drawing.Size(48, 0);
-            this.saveDatabaseButton.Name = "saveDatabaseButton";
-            this.saveDatabaseButton.Text = "Save";
-            this.saveDatabaseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.saveDatabaseButton.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
             // editGroup
             // 
             this.editGroup.AccessibleDescription = "Edit";
@@ -524,7 +502,9 @@
             this.editGroup.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.addButton,
             this.removeButton,
-            this.editButton});
+            this.editButton,
+            this.radButtonElement3,
+            this.radButtonElement5});
             this.editGroup.Margin = new System.Windows.Forms.Padding(0);
             this.editGroup.MaxSize = new System.Drawing.Size(0, 0);
             this.editGroup.MinSize = new System.Drawing.Size(0, 0);
@@ -544,6 +524,7 @@
             this.addButton.Text = "Add";
             this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addButton.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // removeButton
             // 
@@ -557,6 +538,7 @@
             this.removeButton.Text = "Remove";
             this.removeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.removeButton.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // editButton
             // 
@@ -973,11 +955,94 @@
             this.documentWindow2.Size = new System.Drawing.Size(200, 200);
             this.documentWindow2.Text = "documentWindow2";
             // 
+            // saveDatabaseButton
+            // 
+            this.saveDatabaseButton.AccessibleDescription = "Save";
+            this.saveDatabaseButton.AccessibleName = "Save";
+            this.saveDatabaseButton.Class = "RibbonBarButtonElement";
+            this.saveDatabaseButton.Image = global::ThinkManage.Properties.Resources.Save;
+            this.saveDatabaseButton.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveDatabaseButton.MinSize = new System.Drawing.Size(48, 0);
+            this.saveDatabaseButton.Name = "saveDatabaseButton";
+            this.saveDatabaseButton.Text = "Save";
+            this.saveDatabaseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.saveDatabaseButton.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radButtonElement1
+            // 
+            this.radButtonElement1.AccessibleDescription = "Save";
+            this.radButtonElement1.AccessibleName = "Save";
+            this.radButtonElement1.Class = "RibbonBarButtonElement";
+            this.radButtonElement1.Image = global::ThinkManage.Properties.Resources.Save;
+            this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement1.MinSize = new System.Drawing.Size(48, 0);
+            this.radButtonElement1.Name = "radButtonElement1";
+            this.radButtonElement1.Text = "Save";
+            this.radButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement1.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radButtonElement2
+            // 
+            this.radButtonElement2.AccessibleDescription = "Save";
+            this.radButtonElement2.AccessibleName = "Save";
+            this.radButtonElement2.Class = "RibbonBarButtonElement";
+            this.radButtonElement2.Image = global::ThinkManage.Properties.Resources.Save;
+            this.radButtonElement2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement2.MinSize = new System.Drawing.Size(48, 0);
+            this.radButtonElement2.Name = "radButtonElement2";
+            this.radButtonElement2.Text = "Save";
+            this.radButtonElement2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement2.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radRibbonBarButtonGroup4
+            // 
+            this.radRibbonBarButtonGroup4.AccessibleDescription = "radRibbonBarButtonGroup4";
+            this.radRibbonBarButtonGroup4.AccessibleName = "radRibbonBarButtonGroup4";
+            this.radRibbonBarButtonGroup4.Name = "radRibbonBarButtonGroup4";
+            this.radRibbonBarButtonGroup4.Text = "radRibbonBarButtonGroup4";
+            this.radRibbonBarButtonGroup4.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radButtonElement3
+            // 
+            this.radButtonElement3.AccessibleDescription = "radButtonElement3";
+            this.radButtonElement3.AccessibleName = "radButtonElement3";
+            this.radButtonElement3.Class = "RibbonBarButtonElement";
+            this.radButtonElement3.DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
+            this.radButtonElement3.Name = "radButtonElement3";
+            this.radButtonElement3.Text = "radButtonElement3";
+            this.radButtonElement3.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radButtonElement4
+            // 
+            this.radButtonElement4.AccessibleDescription = "Save";
+            this.radButtonElement4.AccessibleName = "Save";
+            this.radButtonElement4.Class = "RibbonBarButtonElement";
+            this.radButtonElement4.Image = global::ThinkManage.Properties.Resources.Save;
+            this.radButtonElement4.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radButtonElement4.MinSize = new System.Drawing.Size(48, 0);
+            this.radButtonElement4.Name = "radButtonElement4";
+            this.radButtonElement4.Text = "Save";
+            this.radButtonElement4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement4.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radButtonElement5
+            // 
+            this.radButtonElement5.AccessibleDescription = "Save";
+            this.radButtonElement5.AccessibleName = "Save";
+            this.radButtonElement5.AutoSize = true;
+            this.radButtonElement5.Class = "RibbonBarButtonElement";
+            this.radButtonElement5.Image = global::ThinkManage.Properties.Resources.Save;
+            this.radButtonElement5.Name = "radButtonElement5";
+            this.radButtonElement5.Text = "Save";
+            this.radButtonElement5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement5.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            this.radButtonElement5.Click += new System.EventHandler(this.radButtonElement5_Click);
+            // 
             // ThinkManageMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1820, 1094);
+            this.ClientSize = new System.Drawing.Size(1844, 1094);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar2);
@@ -989,6 +1054,8 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "思想管理软件";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ThinkManageMain_FormClosed);
+            this.Load += new System.EventHandler(this.ThinkManageMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).EndInit();
             this.documentContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip1)).EndInit();
@@ -1000,9 +1067,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).EndInit();
             this.radDock1.ResumeLayout(false);
             this.toolWindow7.ResumeLayout(false);
-            //((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objectProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).EndInit();
             this.toolTabStrip4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
@@ -1017,6 +1082,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
             this.radPageView1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1056,7 +1122,6 @@
         private Telerik.WinControls.UI.RibbonTab homeTab;
         private Telerik.WinControls.UI.RadRibbonBarGroup databaseGroup;
         private Telerik.WinControls.UI.RadButtonElement loadDatabaseButton;
-        private Telerik.WinControls.UI.RadButtonElement saveDatabaseButton;
         private Telerik.WinControls.UI.RadRibbonBarGroup editGroup;
         private Telerik.WinControls.UI.RadButtonElement addButton;
         private Telerik.WinControls.UI.RadButtonElement removeButton;
@@ -1088,8 +1153,14 @@
         private Telerik.WinControls.UI.RadGalleryItem controlDefaultButton;
         private Telerik.WinControls.UI.RadGalleryItem telerikButton;
         private Telerik.WinControls.UI.RadTreeView radTreeView1;
-        private Telerik.OpenAccess.ObjectView objectView1;
-        private Telerik.OpenAccess.ObjectProvider objectProvider1;
+        private System.Windows.Forms.BindingSource thinkContentsBindingSource;
+        private Telerik.WinControls.UI.RadButtonElement saveDatabaseButton;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement1;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement5;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement2;
+        private Telerik.WinControls.UI.RadRibbonBarButtonGroup radRibbonBarButtonGroup4;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement4;
     }
 }
 

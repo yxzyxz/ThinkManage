@@ -34,11 +34,18 @@ namespace ThinkManage
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            RadTreeNode newNode = new RadTreeNode("New Node");
+            if (newNode != null)
+            {
+                this.radTreeView1.SelectedNode = newNode;
+                this.radTreeView1.BeginEdit();
+            }
             Category newCategory = new Category();
-            newCategory.CategoryName = "Work";
+            newCategory.CategoryName = newNode.Name;
             newCategory.DateCreated = DateTime.Now;
             dataSource.Add(newCategory);
             dbContent.Add(newCategory);
+
            
         }
 
@@ -65,6 +72,18 @@ namespace ThinkManage
         private void radButtonElement5_Click(object sender, EventArgs e)
         {
             this.dbContent.SaveChanges();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (this.radTreeView1.SelectedNode != null)
+            {
+                this.radTreeView1.SelectedNode.BeginEdit();
+            }
+            //Category selectedCategory = this.dataSource.Current as Category;
+            //if (selectedCategory == null)
+            //    return;
+
         }
     }
 }

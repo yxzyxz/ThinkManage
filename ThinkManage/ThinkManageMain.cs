@@ -54,6 +54,11 @@ namespace ThinkManage
             this.dataSource.DataSource = dbContent.Categories.ToList();
             radTreeView1.DataSource = this.dataSource;
             radTreeView1.AllowEdit = true;
+            radMenuItem1.Click += new EventHandler(this.addButton_Click);
+            radMenuItem2.Click += new EventHandler(this.editButton_Click);
+            radMenuItem3.Click += new EventHandler(this.removeButton_Click);
+            radMenuItem4.Click += new EventHandler(this.removeButton_Click);
+            radMenuItem5.Click += new EventHandler(this.removeButton_Click);
         }
 
         private void ThinkManageMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -101,6 +106,11 @@ namespace ThinkManage
                     this.addButton_Click(null, null);
                 }
             }         
+        }
+
+        private void ThinkManageMain_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

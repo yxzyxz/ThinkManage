@@ -53,6 +53,7 @@ namespace ThinkManage
         {
             this.dataSource.DataSource = dbContent.Categories.ToList();
             radTreeView1.DataSource = this.dataSource;
+            radTreeView1.AllowEdit = true;
         }
 
         private void ThinkManageMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -84,6 +85,22 @@ namespace ThinkManage
             //if (selectedCategory == null)
             //    return;
 
+        }
+
+        private void radTreeView1_ContextMenuOpening(object sender, TreeViewContextMenuOpeningEventArgs e)
+        {
+            for (int i = e.Menu.Items.Count - 1; i >= 0; i--)
+            {
+                if (e.Menu.Items[i].Name == "Delete")
+                {
+                    this.removeButton_Click(null,null);
+                }
+
+                if (e.Menu.Items[i].Name == "New")
+                {
+                    this.addButton_Click(null, null);
+                }
+            }         
         }
     }
 }

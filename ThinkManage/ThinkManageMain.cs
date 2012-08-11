@@ -35,22 +35,29 @@ namespace ThinkManage
         private void addButton_Click(object sender, EventArgs e)
         {
             RadTreeNode newNode = new RadTreeNode("New Node");
-            if (newNode != null)
-            {
-                this.radTreeView1.SelectedNode = newNode;
-                this.radTreeView1.BeginEdit();
-            }
+            Category selectedCategory = this.dataSource.Current as Category;
+            if (selectedCategory == null)
+                return;
+
+            //if (newNode != null)
+            //{
+            //    this.radTreeView1.SelectedNode = newNode;
+            //    this.radTreeView1.BeginEdit();
+            //}
             Category newCategory = new Category();
             newCategory.CategoryName = newNode.Name;
+            newCategory.PId = selectedCategory.Id;
             newCategory.DateCreated = DateTime.Now;
             dataSource.Add(newCategory);
             dbContent.Add(newCategory);
-
-           
+            this.dbContent.SaveChanges();           
         }
 
         private void ThinkManageMain_Load(object sender, EventArgs e)
         {
+            //this.radTreeView1.DisplayMember = "CategoryName";
+            this.radTreeView1.ParentMember = "Pid";
+            this.radTreeView1.ChildMember = "Id";
             this.dataSource.DataSource = dbContent.Categories.ToList();
             radTreeView1.DataSource = this.dataSource;
             radTreeView1.AllowEdit = true;

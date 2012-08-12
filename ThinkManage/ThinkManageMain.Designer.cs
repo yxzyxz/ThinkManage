@@ -185,7 +185,7 @@
             this.radStatusStrip1.LayoutStyle = Telerik.WinControls.UI.RadStatusBarLayoutStyle.Stack;
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 1062);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1876, 32);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1884, 32);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -209,7 +209,7 @@
             this.radPanel1.EnableTheming = false;
             this.radPanel1.Location = new System.Drawing.Point(0, 187);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(1876, 875);
+            this.radPanel1.Size = new System.Drawing.Size(1884, 875);
             this.radPanel1.TabIndex = 3;
             this.radPanel1.TabStop = false;
             this.radPanel1.Text = "radPanel1";
@@ -232,7 +232,7 @@
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.radDock1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radDock1.Size = new System.Drawing.Size(1876, 875);
+            this.radDock1.Size = new System.Drawing.Size(1884, 875);
             this.radDock1.SplitterWidth = 4;
             this.radDock1.TabIndex = 0;
             this.radDock1.TabStop = false;
@@ -276,6 +276,7 @@
             this.radTreeView1.Text = "radTreeView1";
             this.radTreeView1.ValueMember = "Id";
             this.radTreeView1.ContextMenuOpening += new Telerik.WinControls.UI.TreeViewContextMenuOpeningEventHandler(this.radTreeView1_ContextMenuOpening);
+            this.radTreeView1.NodeAdded += new Telerik.WinControls.UI.RadTreeView.RadTreeViewEventHandler(this.radTreeView1_NodeAdded);
             // 
             // radContextMenu1
             // 
@@ -357,7 +358,7 @@
             // 
             this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.radSplitContainer1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radSplitContainer1.Size = new System.Drawing.Size(1550, 865);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1558, 865);
             this.radSplitContainer1.SizeInfo.AbsoluteSize = new System.Drawing.Size(850, 200);
             this.radSplitContainer1.SizeInfo.SplitterCorrection = new System.Drawing.Size(-112, 0);
             this.radSplitContainer1.SplitterWidth = 4;
@@ -376,7 +377,7 @@
             // 
             this.documentContainer2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.documentContainer2.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.documentContainer2.Size = new System.Drawing.Size(1550, 691);
+            this.documentContainer2.Size = new System.Drawing.Size(1558, 691);
             this.documentContainer2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 435);
             this.documentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill;
             this.documentContainer2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 30);
@@ -396,7 +397,7 @@
             // 
             this.documentTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.documentTabStrip2.SelectedIndex = 0;
-            this.documentTabStrip2.Size = new System.Drawing.Size(1550, 691);
+            this.documentTabStrip2.Size = new System.Drawing.Size(1558, 691);
             this.documentTabStrip2.TabIndex = 0;
             this.documentTabStrip2.TabStop = false;
             // 
@@ -405,7 +406,7 @@
             this.documentWindow4.Location = new System.Drawing.Point(6, 37);
             this.documentWindow4.Name = "documentWindow4";
             this.documentWindow4.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument;
-            this.documentWindow4.Size = new System.Drawing.Size(1538, 648);
+            this.documentWindow4.Size = new System.Drawing.Size(1546, 648);
             this.documentWindow4.Text = "documentWindow1";
             // 
             // documentWindow3
@@ -426,7 +427,7 @@
             // 
             this.toolTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.toolTabStrip2.SelectedIndex = 0;
-            this.toolTabStrip2.Size = new System.Drawing.Size(1550, 170);
+            this.toolTabStrip2.Size = new System.Drawing.Size(1558, 170);
             this.toolTabStrip2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 170);
             this.toolTabStrip2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -30);
             this.toolTabStrip2.TabIndex = 1;
@@ -439,7 +440,7 @@
             this.toolWindow8.Location = new System.Drawing.Point(1, 30);
             this.toolWindow8.Name = "toolWindow8";
             this.toolWindow8.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            this.toolWindow8.Size = new System.Drawing.Size(1548, 138);
+            this.toolWindow8.Size = new System.Drawing.Size(1556, 138);
             this.toolWindow8.Text = "toolWindow8";
             // 
             // radPageView1
@@ -451,7 +452,7 @@
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
             this.radPageView1.SelectedPage = this.radPageViewPage3;
-            this.radPageView1.Size = new System.Drawing.Size(1548, 138);
+            this.radPageView1.Size = new System.Drawing.Size(1556, 138);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
             // 
@@ -473,7 +474,7 @@
             // 
             this.radPageViewPage3.Location = new System.Drawing.Point(10, 45);
             this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(1527, 82);
+            this.radPageViewPage3.Size = new System.Drawing.Size(1535, 82);
             this.radPageViewPage3.Text = "radPageViewPage3";
             // 
             // radRibbonBar2
@@ -514,7 +515,7 @@
             // 
             // 
             this.radRibbonBar2.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar2.Size = new System.Drawing.Size(1876, 187);
+            this.radRibbonBar2.Size = new System.Drawing.Size(1884, 187);
             this.radRibbonBar2.StartButtonImage = null;
             this.radRibbonBar2.TabIndex = 1;
             this.radRibbonBar2.Text = "思想管理软件";
@@ -1110,7 +1111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1876, 1094);
+            this.ClientSize = new System.Drawing.Size(1884, 1094);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar2);

@@ -76,11 +76,12 @@ namespace ThinkManage
         }
         private void TreeViewExpand()
         {
-                this.radTreeView1.Nodes[0].Expand();
-                this.radTreeView1.DisplayMember = "CategoryName";
+                ////this.radTreeView1.Nodes[0].Expand();
                 this.radTreeView1.ParentMember = "Pid";
                 this.radTreeView1.ChildMember = "Id";
+                this.radTreeView1.DisplayMember = "CategoryName";
                 //this.radTreeView1.SelectedNode = this.radTreeView1.Nodes[0].Nodes[1];
+                radTreeView1.ExpandAll();
                 this.radTreeView1.SpacingBetweenNodes = 2;
         }
         private void ThinkManageMain_FormClosed(object sender, FormClosedEventArgs e)

@@ -17,10 +17,17 @@ namespace ThinkManage
     {
         private ThinkManageEntitiesModel dbContent = new ThinkManageEntitiesModel();
         private BindingSource dataSource = new BindingSource();
-        private int treeViewId;
         public ThinkManageMain()
         {
             InitializeComponent();
+            this.radTreeView1.SelectedNodeChanged += new RadTreeView.RadTreeViewEventHandler(radTreeView1_SelectedNodeChanged);
+        }
+
+        void radTreeView1_SelectedNodeChanged(object sender, RadTreeViewEventArgs e)
+        {
+            Category selectedCategory = this.dataSource.Current as Category;
+            //int currentId = selectedCategory.Id;
+            //MessageBox.Show("Current Id is:" + currentId);
         }
 
         private void toolTabStrip3_Click(object sender, EventArgs e)
@@ -37,29 +44,31 @@ namespace ThinkManage
         {
             RadTreeNode newNode = new RadTreeNode("New Node");
             Category selectedCategory = this.dataSource.Current as Category;
-            //MessageBox.Show("selectedCategory.Id=" + selectedCategory.Id);
-
             if (selectedCategory == null)
-            {
-                treeViewId = 0;
-            }
-            else
-            {
-                treeViewId = selectedCategory.Id;
-                MessageBox.Show("selectedCategory ！= null! treeViewPid=" + treeViewId);
-            }
+                return;
+
+            //if (newNode != null)
+            //{
+            //    this.radTreeView1.SelectedNode = newNode;
+            //    this.radTreeView1.BeginEdit();
+            //}
             Category newCategory = new Category();
             newCategory.CategoryName = newNode.Name;
-            newCategory.PId = treeViewId;
+            //newCategory.PId = selectedCategory.Id;
             newCategory.DateCreated = DateTime.Now;
             dataSource.Add(newCategory);
             dbContent.Add(newCategory);
             this.dbContent.SaveChanges();
-            this.radTreeView1.SelectedNode.Expand();
+            //MessageBox.Show("newCategory PId is:" + selectedCategory.Id);
+
         }
 
         private void ThinkManageMain_Load(object sender, EventArgs e)
         {
+            this.radTreeView1.DisplayMember = "CategoryName";
+            //this.radTreeView1.ParentMember = "Pid";
+            this.radTreeView1.DataMember = "Id";
+            
             this.dataSource.DataSource = dbContent.Categories.ToList();
             radTreeView1.DataSource = this.dataSource;
             radTreeView1.AllowEdit = true;
@@ -68,22 +77,14 @@ namespace ThinkManage
             radMenuItem3.Click += new EventHandler(this.removeButton_Click);
             radMenuItem4.Click += new EventHandler(this.removeButton_Click);
             radMenuItem5.Click += new EventHandler(this.removeButton_Click);
-            if (this.radTreeView1.Nodes.Count >= 1)
-            {
-                TreeViewExpand();
-                MessageBox.Show("radTreeView1.Nodes.Count >= 1,TreeViewExpand");
-            }
+
+            //ThinkManageEntitiesModel entities = new ThinkManageEntitiesModel();
+            //var query = from content in entities.ThinkContents select content;
+            this.radGridView1.DataSource = dbContent.ThinkContents.ToList();
+            this.radGridView1.AutoGenerateHierarchy = true;
+            this.radTreeView1.AutoSize = true;
         }
-        private void TreeViewExpand()
-        {
-                ////this.radTreeView1.Nodes[0].Expand();
-                this.radTreeView1.ParentMember = "Pid";
-                this.radTreeView1.ChildMember = "Id";
-                this.radTreeView1.DisplayMember = "CategoryName";
-                //this.radTreeView1.SelectedNode = this.radTreeView1.Nodes[0].Nodes[1];
-                radTreeView1.ExpandAll();
-                this.radTreeView1.SpacingBetweenNodes = 2;
-        }
+
         private void ThinkManageMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             dbContent.Dispose();
@@ -101,7 +102,6 @@ namespace ThinkManage
         private void radButtonElement5_Click(object sender, EventArgs e)
         {
             this.dbContent.SaveChanges();
-
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -134,18 +134,6 @@ namespace ThinkManage
 
         private void ThinkManageMain_Leave(object sender, EventArgs e)
         {
-
-        }
-
-        private void radTreeView1_NodeAdded(object sender, RadTreeViewEventArgs e)
-        {
-            MessageBox.Show("radTreeView1.Nodes.Count == " + radTreeView1.Nodes.Count);
-
-            if (this.radTreeView1.Nodes.Count == 1)
-            {
-                TreeViewExpand();
-                MessageBox.Show("radTreeView1.Nodes.Count == 1,TreeViewExpand");
-            }
 
         }
     }

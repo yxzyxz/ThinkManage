@@ -103,6 +103,11 @@
     <EmbeddedResource Include="ThinkManageMain.resx">
       <DependentUpon>ThinkManageMain.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Category.datasource" />
+    <None Include="Tag.datasource" />
+    <None Include="ThinkContents.datasource" />
+    <None Include="ThinkManageEntitiesModel.datasource" />
+    <None Include="ThinkManageMain.datasource" />
     <OpenAccessDeploy Include="EntityDiagrams.rlinq">
       <Generator>MetaModelCodeGenerator</Generator>
       <LastGenOutput>EntityDiagrams.cs</LastGenOutput>

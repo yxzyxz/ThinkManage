@@ -24,7 +24,7 @@
           <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
         </orm:field>
         <orm:field name="_thinkContents" property="ThinkContents" behavior="readwrite" uniqueId="b3c2457c-871f-4739-bf71-ee94534cf1e0" type="ThinkManage.ThinkContents">
-          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_category" order-by="" uniqueId="ec689dad-9c06-4a21-b99e-34104a49430f" />
+          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_category" managed="true" order-by="" uniqueId="ec689dad-9c06-4a21-b99e-34104a49430f" />
         </orm:field>
         <orm:index name="idx_category_id2">
           <orm:column name="id2" sql-type="int" nullable="true" length="0" scale="0" converter="OpenAccessRuntime.Data.IntConverter" ado-type="Int32" />
@@ -45,7 +45,7 @@
           <orm:column name="date_created" sql-type="datetime" nullable="false" length="0" scale="0" converter="OpenAccessRuntime.Data.MssqlMinDateConverter" ado-type="DateTime" />
         </orm:field>
         <orm:field name="_thinkContents" property="ThinkContents" behavior="readwrite" uniqueId="3551e330-80c0-43a7-ad6d-b1bfedaac56c" type="ThinkManage.ThinkContents">
-          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_tag" order-by="" uniqueId="b2bd4f4c-ca26-4af5-8b43-6254be9bb550" />
+          <orm:collection element-class="ThinkManage.ThinkContents" inverse-field="_tag" managed="true" order-by="" uniqueId="b2bd4f4c-ca26-4af5-8b43-6254be9bb550" />
         </orm:field>
       </orm:class>
       <orm:class name="ThinkContents" behavior="readwrite" uniqueId="47aa9435-240c-49e7-96af-5c2731c97280">
@@ -140,7 +140,7 @@
       <Property Id="05bdbc64-9da4-44ad-81c0-d4d45451f157" name="Id2" type="int" label="Id2 : int" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="a322f6b7-ae57-44b1-a3ad-820f80023056">
-          <NavigationalProperty Id="b3c2457c-871f-4739-bf71-ee94534cf1e0" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="b3c2457c-871f-4739-bf71-ee94534cf1e0" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -150,7 +150,7 @@
       <Property Id="d0a32290-a135-4f7b-a4ab-b8c4edbae305" name="DateCreated" type="DateTime" label="DateCreated : DateTime" />
       <navigationalProperties>
         <classHasNavigationalProperties Id="afba728e-7afc-4bf3-a64e-68261d9bc117">
-          <NavigationalProperty Id="3551e330-80c0-43a7-ad6d-b1bfedaac56c" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="3551e330-80c0-43a7-ad6d-b1bfedaac56c" name="ThinkContents" type="IList&lt;ThinkContents&gt;" label="ThinkContents : IList&lt;ThinkContents&gt;" nullable="true" kind="Persistent" fieldName="_thinkContents" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>
@@ -193,7 +193,7 @@
           <NavigationalProperty Id="17193718-11b9-467e-8fd6-799e3480ff76" name="Tag" type="Tag" label="Tag : Tag" nullable="true" kind="Persistent" fieldName="_tag" isDependent="false" isManaged="false" />
         </classHasNavigationalProperties>
         <classHasNavigationalProperties Id="2920f882-8cef-4740-9547-9b3d96d21835">
-          <NavigationalProperty Id="fd394463-7fd8-4ab6-8c9c-7a849233cc26" name="Category" type="Category" label="Category : Category" nullable="true" kind="Persistent" fieldName="_category" isDependent="false" isManaged="false" />
+          <NavigationalProperty Id="fd394463-7fd8-4ab6-8c9c-7a849233cc26" name="Category" type="Category" label="Category : Category" nullable="true" kind="Persistent" fieldName="_category" isDependent="false" isManaged="true" />
         </classHasNavigationalProperties>
       </navigationalProperties>
     </DomainClass>

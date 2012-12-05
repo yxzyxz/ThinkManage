@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.RelationBinding relationBinding1 = new Telerik.WinControls.UI.RelationBinding();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
@@ -38,14 +39,14 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.RelationBinding relationBinding1 = new Telerik.WinControls.UI.RelationBinding();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThinkManageMain));
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThinkManageMain));
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.documentContainer1 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.documentTabStrip1 = new Telerik.WinControls.UI.Docking.DocumentTabStrip();
             this.documentWindow1 = new Telerik.WinControls.UI.Docking.DocumentWindow();
@@ -53,9 +54,6 @@
             this.toolTabStrip1 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radDock1 = new Telerik.WinControls.UI.Docking.RadDock();
-            this.documentWindow4 = new Telerik.WinControls.UI.Docking.DocumentWindow();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.toolTabStrip4 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.toolWindow7 = new Telerik.WinControls.UI.Docking.ToolWindow();
             this.radTreeView1 = new Telerik.WinControls.UI.RadTreeView();
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
@@ -64,9 +62,13 @@
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
+            this.toolTabStrip4 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
             this.documentContainer2 = new Telerik.WinControls.UI.Docking.DocumentContainer();
             this.documentTabStrip2 = new Telerik.WinControls.UI.Docking.DocumentTabStrip();
+            this.documentWindow4 = new Telerik.WinControls.UI.Docking.DocumentWindow();
+            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.thinkContentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.documentWindow3 = new Telerik.WinControls.UI.Docking.DocumentWindow();
             this.toolTabStrip2 = new Telerik.WinControls.UI.Docking.ToolTabStrip();
             this.toolWindow8 = new Telerik.WinControls.UI.Docking.ToolWindow();
@@ -74,6 +76,7 @@
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPageViewPage3 = new Telerik.WinControls.UI.RadPageViewPage();
+            this.radMultiColumnComboBox1 = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radRibbonBar2 = new Telerik.WinControls.UI.RadRibbonBar();
             this.homeTab = new Telerik.WinControls.UI.RibbonTab();
             this.databaseGroup = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -123,10 +126,8 @@
             this.radRibbonBarButtonGroup4 = new Telerik.WinControls.UI.RadRibbonBarButtonGroup();
             this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
             this.radContextMenuManager1 = new Telerik.WinControls.UI.RadContextMenuManager();
-            this.radMultiColumnComboBox1 = new Telerik.WinControls.UI.RadMultiColumnComboBox();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.thinkContentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thinkContentsBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).BeginInit();
             this.documentContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip1)).BeginInit();
@@ -137,31 +138,34 @@
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).BeginInit();
             this.radDock1.SuspendLayout();
-            this.documentWindow4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).BeginInit();
-            this.toolTabStrip4.SuspendLayout();
             this.toolWindow7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).BeginInit();
+            this.toolTabStrip4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer2)).BeginInit();
             this.documentContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip2)).BeginInit();
             this.documentTabStrip2.SuspendLayout();
+            this.documentWindow4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip2)).BeginInit();
             this.toolTabStrip2.SuspendLayout();
             this.toolWindow8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.radPageViewPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMultiColumnComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(ThinkManage.Category);
             // 
             // documentContainer1
             // 
@@ -208,9 +212,9 @@
             // 
             this.radStatusStrip1.AutoSize = true;
             this.radStatusStrip1.LayoutStyle = Telerik.WinControls.UI.RadStatusBarLayoutStyle.Stack;
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 1062);
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 918);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1934, 32);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1727, 28);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -232,16 +236,16 @@
             this.radPanel1.Controls.Add(this.radDock1);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.EnableTheming = false;
-            this.radPanel1.Location = new System.Drawing.Point(0, 185);
+            this.radPanel1.Location = new System.Drawing.Point(0, 167);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(1934, 877);
+            this.radPanel1.Size = new System.Drawing.Size(1727, 751);
             this.radPanel1.TabIndex = 3;
             this.radPanel1.TabStop = false;
             this.radPanel1.Text = "radPanel1";
             // 
             // radDock1
             // 
-            this.radDock1.ActiveWindow = this.documentWindow4;
+            this.radDock1.ActiveWindow = this.toolWindow7;
             this.radDock1.CausesValidation = false;
             this.radDock1.Controls.Add(this.toolTabStrip4);
             this.radDock1.Controls.Add(this.radSplitContainer1);
@@ -257,19 +261,186 @@
             // 
             this.radDock1.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.radDock1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radDock1.Size = new System.Drawing.Size(1934, 877);
+            this.radDock1.Size = new System.Drawing.Size(1727, 751);
             this.radDock1.SplitterWidth = 4;
             this.radDock1.TabIndex = 0;
             this.radDock1.TabStop = false;
             this.radDock1.Text = "radDock1";
             // 
+            // toolWindow7
+            // 
+            this.toolWindow7.Caption = null;
+            this.toolWindow7.Controls.Add(this.radTreeView1);
+            this.toolWindow7.Location = new System.Drawing.Point(1, 26);
+            this.toolWindow7.Name = "toolWindow7";
+            this.toolWindow7.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
+            this.toolWindow7.Size = new System.Drawing.Size(310, 713);
+            this.toolWindow7.Text = "toolWindow7";
+            // 
+            // radTreeView1
+            // 
+            this.radTreeView1.AllowAdd = global::ThinkManage.Properties.Settings.Default.New;
+            this.radTreeView1.AllowDefaultContextMenu = global::ThinkManage.Properties.Settings.Default.New;
+            this.radTreeView1.AllowDragDrop = true;
+            this.radTreeView1.AllowEdit = global::ThinkManage.Properties.Settings.Default.Edit;
+            this.radTreeView1.AllowRemove = global::ThinkManage.Properties.Settings.Default.Delete;
+            this.radTreeView1.BackColor = System.Drawing.Color.White;
+            this.radTreeView1.ChildMember = "Id";
+            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowAdd", global::ThinkManage.Properties.Settings.Default, "New", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowDefaultContextMenu", global::ThinkManage.Properties.Settings.Default, "New", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowEdit", global::ThinkManage.Properties.Settings.Default, "Edit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowRemove", global::ThinkManage.Properties.Settings.Default, "Delete", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.radTreeView1.DataSource = this.categoryBindingSource;
+            this.radTreeView1.DisplayMember = "CategoryName";
+            this.radTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTreeView1.Location = new System.Drawing.Point(0, 0);
+            this.radTreeView1.Name = "radTreeView1";
+            this.radTreeView1.ParentMember = "PId";
+            this.radTreeView1.RadContextMenu = this.radContextMenu1;
+            relationBinding1.ChildMember = "Id";
+            relationBinding1.DataSource = this.categoryBindingSource;
+            relationBinding1.DisplayMember = "CategoryName";
+            relationBinding1.ParentMember = "PId";
+            relationBinding1.ValueMember = "Id";
+            this.radTreeView1.RelationBindings.AddRange(new Telerik.WinControls.UI.RelationBinding[] {
+            relationBinding1});
+            this.radTreeView1.Size = new System.Drawing.Size(310, 713);
+            this.radTreeView1.SpacingBetweenNodes = -1;
+            this.radTreeView1.TabIndex = 0;
+            this.radTreeView1.Text = "radTreeView1";
+            this.radTreeView1.ValueMember = "Id";
+            this.radTreeView1.ContextMenuOpening += new Telerik.WinControls.UI.TreeViewContextMenuOpeningEventHandler(this.radTreeView1_ContextMenuOpening);
+            // 
+            // radContextMenu1
+            // 
+            this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem1,
+            this.radMenuItem2,
+            this.radMenuItem3,
+            this.radMenuItem4,
+            this.radMenuItem5});
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.AccessibleDescription = "New";
+            this.radMenuItem1.AccessibleName = "New";
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "New";
+            this.radMenuItem1.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.AccessibleDescription = "Edit";
+            this.radMenuItem2.AccessibleName = "Edit";
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Text = "Edit";
+            this.radMenuItem2.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.AccessibleDescription = "Expand";
+            this.radMenuItem3.AccessibleName = "Expand";
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Text = "Expand";
+            this.radMenuItem3.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radMenuItem4
+            // 
+            this.radMenuItem4.AccessibleDescription = "Collapse";
+            this.radMenuItem4.AccessibleName = "Collapse";
+            this.radMenuItem4.Name = "radMenuItem4";
+            this.radMenuItem4.Text = "Collapse";
+            this.radMenuItem4.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // radMenuItem5
+            // 
+            this.radMenuItem5.AccessibleDescription = "Delete";
+            this.radMenuItem5.AccessibleName = "Delete";
+            this.radMenuItem5.Name = "radMenuItem5";
+            this.radMenuItem5.Text = "Delete";
+            this.radMenuItem5.Visibility = Telerik.WinControls.ElementVisibility.Visible;
+            // 
+            // toolTabStrip4
+            // 
+            this.toolTabStrip4.Controls.Add(this.toolWindow7);
+            this.toolTabStrip4.Location = new System.Drawing.Point(5, 5);
+            this.toolTabStrip4.Name = "toolTabStrip4";
+            // 
+            // 
+            // 
+            this.toolTabStrip4.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.toolTabStrip4.SelectedIndex = 0;
+            this.toolTabStrip4.Size = new System.Drawing.Size(312, 741);
+            this.toolTabStrip4.SizeInfo.AbsoluteSize = new System.Drawing.Size(312, 200);
+            this.toolTabStrip4.SizeInfo.SplitterCorrection = new System.Drawing.Size(112, 0);
+            this.toolTabStrip4.TabIndex = 1;
+            this.toolTabStrip4.TabStop = false;
+            // 
+            // radSplitContainer1
+            // 
+            this.radSplitContainer1.CausesValidation = false;
+            this.radSplitContainer1.Controls.Add(this.documentContainer2);
+            this.radSplitContainer1.Controls.Add(this.toolTabStrip2);
+            this.radSplitContainer1.IsCleanUpTarget = true;
+            this.radSplitContainer1.Location = new System.Drawing.Point(321, 5);
+            this.radSplitContainer1.Name = "radSplitContainer1";
+            this.radSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.radSplitContainer1.Padding = new System.Windows.Forms.Padding(5);
+            // 
+            // 
+            // 
+            this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.radSplitContainer1.RootElement.Padding = new System.Windows.Forms.Padding(5);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1401, 741);
+            this.radSplitContainer1.SizeInfo.AbsoluteSize = new System.Drawing.Size(850, 200);
+            this.radSplitContainer1.SizeInfo.SplitterCorrection = new System.Drawing.Size(-112, 0);
+            this.radSplitContainer1.SplitterWidth = 4;
+            this.radSplitContainer1.TabIndex = 2;
+            this.radSplitContainer1.TabStop = false;
+            // 
+            // documentContainer2
+            // 
+            this.documentContainer2.CausesValidation = false;
+            this.documentContainer2.Controls.Add(this.documentTabStrip2);
+            this.documentContainer2.Location = new System.Drawing.Point(0, 0);
+            this.documentContainer2.Name = "documentContainer2";
+            this.documentContainer2.Padding = new System.Windows.Forms.Padding(5);
+            // 
+            // 
+            // 
+            this.documentContainer2.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.documentContainer2.RootElement.Padding = new System.Windows.Forms.Padding(5);
+            this.documentContainer2.Size = new System.Drawing.Size(1401, 567);
+            this.documentContainer2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 435);
+            this.documentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill;
+            this.documentContainer2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 30);
+            this.documentContainer2.SplitterWidth = 4;
+            this.documentContainer2.TabIndex = 0;
+            this.documentContainer2.TabStop = false;
+            // 
+            // documentTabStrip2
+            // 
+            this.documentTabStrip2.CausesValidation = false;
+            this.documentTabStrip2.Controls.Add(this.documentWindow4);
+            this.documentTabStrip2.Controls.Add(this.documentWindow3);
+            this.documentTabStrip2.Location = new System.Drawing.Point(0, 0);
+            this.documentTabStrip2.Name = "documentTabStrip2";
+            // 
+            // 
+            // 
+            this.documentTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.documentTabStrip2.SelectedIndex = 0;
+            this.documentTabStrip2.Size = new System.Drawing.Size(1401, 567);
+            this.documentTabStrip2.TabIndex = 0;
+            this.documentTabStrip2.TabStop = false;
+            // 
             // documentWindow4
             // 
             this.documentWindow4.Controls.Add(this.radGridView1);
-            this.documentWindow4.Location = new System.Drawing.Point(6, 37);
+            this.documentWindow4.Location = new System.Drawing.Point(6, 33);
             this.documentWindow4.Name = "documentWindow4";
             this.documentWindow4.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument;
-            this.documentWindow4.Size = new System.Drawing.Size(1596, 650);
+            this.documentWindow4.Size = new System.Drawing.Size(1389, 528);
             this.documentWindow4.Text = "documentWindow1";
             // 
             // radGridView1
@@ -360,176 +531,13 @@
             sortDescriptor1});
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.Size = new System.Drawing.Size(1596, 650);
+            this.radGridView1.Size = new System.Drawing.Size(1389, 528);
             this.radGridView1.TabIndex = 0;
             this.radGridView1.Text = "radGridView1";
             // 
-            // toolTabStrip4
+            // thinkContentsBindingSource
             // 
-            this.toolTabStrip4.Controls.Add(this.toolWindow7);
-            this.toolTabStrip4.Location = new System.Drawing.Point(5, 5);
-            this.toolTabStrip4.Name = "toolTabStrip4";
-            // 
-            // 
-            // 
-            this.toolTabStrip4.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.toolTabStrip4.SelectedIndex = 0;
-            this.toolTabStrip4.Size = new System.Drawing.Size(312, 867);
-            this.toolTabStrip4.SizeInfo.AbsoluteSize = new System.Drawing.Size(312, 200);
-            this.toolTabStrip4.SizeInfo.SplitterCorrection = new System.Drawing.Size(112, 0);
-            this.toolTabStrip4.TabIndex = 1;
-            this.toolTabStrip4.TabStop = false;
-            // 
-            // toolWindow7
-            // 
-            this.toolWindow7.Caption = null;
-            this.toolWindow7.Controls.Add(this.radTreeView1);
-            this.toolWindow7.Location = new System.Drawing.Point(1, 30);
-            this.toolWindow7.Name = "toolWindow7";
-            this.toolWindow7.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            this.toolWindow7.Size = new System.Drawing.Size(310, 835);
-            this.toolWindow7.Text = "toolWindow7";
-            // 
-            // radTreeView1
-            // 
-            this.radTreeView1.AllowAdd = global::ThinkManage.Properties.Settings.Default.New;
-            this.radTreeView1.AllowDefaultContextMenu = global::ThinkManage.Properties.Settings.Default.New;
-            this.radTreeView1.AllowDragDrop = true;
-            this.radTreeView1.AllowEdit = global::ThinkManage.Properties.Settings.Default.Edit;
-            this.radTreeView1.AllowRemove = global::ThinkManage.Properties.Settings.Default.Delete;
-            this.radTreeView1.BackColor = System.Drawing.Color.White;
-            this.radTreeView1.ChildMember = "Id";
-            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowAdd", global::ThinkManage.Properties.Settings.Default, "New", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowDefaultContextMenu", global::ThinkManage.Properties.Settings.Default, "New", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowEdit", global::ThinkManage.Properties.Settings.Default, "Edit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.radTreeView1.DataBindings.Add(new System.Windows.Forms.Binding("AllowRemove", global::ThinkManage.Properties.Settings.Default, "Delete", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.radTreeView1.DataSource = this.categoryBindingSource;
-            this.radTreeView1.DisplayMember = "CategoryName";
-            this.radTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radTreeView1.Location = new System.Drawing.Point(0, 0);
-            this.radTreeView1.Name = "radTreeView1";
-            this.radTreeView1.ParentMember = "PId";
-            this.radTreeView1.RadContextMenu = this.radContextMenu1;
-            relationBinding1.ChildMember = "Id";
-            relationBinding1.DataSource = this.categoryBindingSource;
-            relationBinding1.DisplayMember = "CategoryName";
-            relationBinding1.ParentMember = "PId";
-            relationBinding1.ValueMember = "Id";
-            this.radTreeView1.RelationBindings.AddRange(new Telerik.WinControls.UI.RelationBinding[] {
-            relationBinding1});
-            this.radTreeView1.Size = new System.Drawing.Size(310, 835);
-            this.radTreeView1.SpacingBetweenNodes = -1;
-            this.radTreeView1.TabIndex = 0;
-            this.radTreeView1.Text = "radTreeView1";
-            this.radTreeView1.ValueMember = "Id";
-            this.radTreeView1.ContextMenuOpening += new Telerik.WinControls.UI.TreeViewContextMenuOpeningEventHandler(this.radTreeView1_ContextMenuOpening);
-            // 
-            // radContextMenu1
-            // 
-            this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem1,
-            this.radMenuItem2,
-            this.radMenuItem3,
-            this.radMenuItem4,
-            this.radMenuItem5});
-            // 
-            // radMenuItem1
-            // 
-            this.radMenuItem1.AccessibleDescription = "New";
-            this.radMenuItem1.AccessibleName = "New";
-            this.radMenuItem1.Name = "radMenuItem1";
-            this.radMenuItem1.Text = "New";
-            this.radMenuItem1.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // radMenuItem2
-            // 
-            this.radMenuItem2.AccessibleDescription = "Edit";
-            this.radMenuItem2.AccessibleName = "Edit";
-            this.radMenuItem2.Name = "radMenuItem2";
-            this.radMenuItem2.Text = "Edit";
-            this.radMenuItem2.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // radMenuItem3
-            // 
-            this.radMenuItem3.AccessibleDescription = "Expand";
-            this.radMenuItem3.AccessibleName = "Expand";
-            this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "Expand";
-            this.radMenuItem3.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // radMenuItem4
-            // 
-            this.radMenuItem4.AccessibleDescription = "Collapse";
-            this.radMenuItem4.AccessibleName = "Collapse";
-            this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Collapse";
-            this.radMenuItem4.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // radMenuItem5
-            // 
-            this.radMenuItem5.AccessibleDescription = "Delete";
-            this.radMenuItem5.AccessibleName = "Delete";
-            this.radMenuItem5.Name = "radMenuItem5";
-            this.radMenuItem5.Text = "Delete";
-            this.radMenuItem5.Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // radSplitContainer1
-            // 
-            this.radSplitContainer1.CausesValidation = false;
-            this.radSplitContainer1.Controls.Add(this.documentContainer2);
-            this.radSplitContainer1.Controls.Add(this.toolTabStrip2);
-            this.radSplitContainer1.IsCleanUpTarget = true;
-            this.radSplitContainer1.Location = new System.Drawing.Point(321, 5);
-            this.radSplitContainer1.Name = "radSplitContainer1";
-            this.radSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.radSplitContainer1.Padding = new System.Windows.Forms.Padding(5);
-            // 
-            // 
-            // 
-            this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.radSplitContainer1.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.radSplitContainer1.Size = new System.Drawing.Size(1608, 867);
-            this.radSplitContainer1.SizeInfo.AbsoluteSize = new System.Drawing.Size(850, 200);
-            this.radSplitContainer1.SizeInfo.SplitterCorrection = new System.Drawing.Size(-112, 0);
-            this.radSplitContainer1.SplitterWidth = 4;
-            this.radSplitContainer1.TabIndex = 2;
-            this.radSplitContainer1.TabStop = false;
-            // 
-            // documentContainer2
-            // 
-            this.documentContainer2.CausesValidation = false;
-            this.documentContainer2.Controls.Add(this.documentTabStrip2);
-            this.documentContainer2.Location = new System.Drawing.Point(0, 0);
-            this.documentContainer2.Name = "documentContainer2";
-            this.documentContainer2.Padding = new System.Windows.Forms.Padding(5);
-            // 
-            // 
-            // 
-            this.documentContainer2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.documentContainer2.RootElement.Padding = new System.Windows.Forms.Padding(5);
-            this.documentContainer2.Size = new System.Drawing.Size(1608, 693);
-            this.documentContainer2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 435);
-            this.documentContainer2.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill;
-            this.documentContainer2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 30);
-            this.documentContainer2.SplitterWidth = 4;
-            this.documentContainer2.TabIndex = 0;
-            this.documentContainer2.TabStop = false;
-            // 
-            // documentTabStrip2
-            // 
-            this.documentTabStrip2.CausesValidation = false;
-            this.documentTabStrip2.Controls.Add(this.documentWindow4);
-            this.documentTabStrip2.Controls.Add(this.documentWindow3);
-            this.documentTabStrip2.Location = new System.Drawing.Point(0, 0);
-            this.documentTabStrip2.Name = "documentTabStrip2";
-            // 
-            // 
-            // 
-            this.documentTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.documentTabStrip2.SelectedIndex = 0;
-            this.documentTabStrip2.Size = new System.Drawing.Size(1608, 693);
-            this.documentTabStrip2.TabIndex = 0;
-            this.documentTabStrip2.TabStop = false;
+            this.thinkContentsBindingSource.DataSource = typeof(ThinkManage.ThinkContents);
             // 
             // documentWindow3
             // 
@@ -542,14 +550,14 @@
             // toolTabStrip2
             // 
             this.toolTabStrip2.Controls.Add(this.toolWindow8);
-            this.toolTabStrip2.Location = new System.Drawing.Point(0, 697);
+            this.toolTabStrip2.Location = new System.Drawing.Point(0, 571);
             this.toolTabStrip2.Name = "toolTabStrip2";
             // 
             // 
             // 
             this.toolTabStrip2.RootElement.MinSize = new System.Drawing.Size(25, 25);
             this.toolTabStrip2.SelectedIndex = 0;
-            this.toolTabStrip2.Size = new System.Drawing.Size(1608, 170);
+            this.toolTabStrip2.Size = new System.Drawing.Size(1401, 170);
             this.toolTabStrip2.SizeInfo.AbsoluteSize = new System.Drawing.Size(200, 170);
             this.toolTabStrip2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -30);
             this.toolTabStrip2.TabIndex = 1;
@@ -559,10 +567,10 @@
             // 
             this.toolWindow8.Caption = null;
             this.toolWindow8.Controls.Add(this.radPageView1);
-            this.toolWindow8.Location = new System.Drawing.Point(1, 30);
+            this.toolWindow8.Location = new System.Drawing.Point(1, 26);
             this.toolWindow8.Name = "toolWindow8";
             this.toolWindow8.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked;
-            this.toolWindow8.Size = new System.Drawing.Size(1606, 138);
+            this.toolWindow8.Size = new System.Drawing.Size(1399, 142);
             this.toolWindow8.Text = "toolWindow8";
             // 
             // radPageView1
@@ -574,7 +582,7 @@
             this.radPageView1.Location = new System.Drawing.Point(0, 0);
             this.radPageView1.Name = "radPageView1";
             this.radPageView1.SelectedPage = this.radPageViewPage3;
-            this.radPageView1.Size = new System.Drawing.Size(1606, 138);
+            this.radPageView1.Size = new System.Drawing.Size(1399, 142);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.Text = "radPageView1";
             // 
@@ -595,10 +603,82 @@
             // radPageViewPage3
             // 
             this.radPageViewPage3.Controls.Add(this.radMultiColumnComboBox1);
-            this.radPageViewPage3.Location = new System.Drawing.Point(10, 45);
+            this.radPageViewPage3.Location = new System.Drawing.Point(10, 41);
             this.radPageViewPage3.Name = "radPageViewPage3";
-            this.radPageViewPage3.Size = new System.Drawing.Size(1585, 82);
+            this.radPageViewPage3.Size = new System.Drawing.Size(1378, 90);
             this.radPageViewPage3.Text = "radPageViewPage3";
+            // 
+            // radMultiColumnComboBox1
+            // 
+            this.radMultiColumnComboBox1.DataSource = this.categoryBindingSource;
+            this.radMultiColumnComboBox1.DisplayMember = "CategoryName";
+            // 
+            // radMultiColumnComboBox1.NestedRadGridView
+            // 
+            this.radMultiColumnComboBox1.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.radMultiColumnComboBox1.EditorControl.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radMultiColumnComboBox1.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radMultiColumnComboBox1.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            gridViewTextBoxColumn4.FieldName = "CategoryName";
+            gridViewTextBoxColumn4.HeaderText = "CategoryName";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "CategoryName";
+            gridViewDecimalColumn4.DataType = typeof(int);
+            gridViewDecimalColumn4.FieldName = "Id";
+            gridViewDecimalColumn4.HeaderText = "Id";
+            gridViewDecimalColumn4.IsAutoGenerated = true;
+            gridViewDecimalColumn4.Name = "Id";
+            gridViewDecimalColumn5.DataType = typeof(int);
+            gridViewDecimalColumn5.FieldName = "PId";
+            gridViewDecimalColumn5.HeaderText = "PId";
+            gridViewDecimalColumn5.IsAutoGenerated = true;
+            gridViewDecimalColumn5.Name = "PId";
+            gridViewDateTimeColumn2.FieldName = "DateCreated";
+            gridViewDateTimeColumn2.HeaderText = "DateCreated";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "DateCreated";
+            gridViewDecimalColumn6.DataType = typeof(int);
+            gridViewDecimalColumn6.FieldName = "Id2";
+            gridViewDecimalColumn6.HeaderText = "Id2";
+            gridViewDecimalColumn6.IsAutoGenerated = true;
+            gridViewDecimalColumn6.Name = "Id2";
+            gridViewTextBoxColumn5.DataType = typeof(System.Collections.Generic.IList<ThinkManage.ThinkContents>);
+            gridViewTextBoxColumn5.FieldName = "ThinkContents";
+            gridViewTextBoxColumn5.HeaderText = "ThinkContents";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "ThinkContents";
+            gridViewTextBoxColumn5.ReadOnly = true;
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn4,
+            gridViewDecimalColumn4,
+            gridViewDecimalColumn5,
+            gridViewDateTimeColumn2,
+            gridViewDecimalColumn6,
+            gridViewTextBoxColumn5});
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.DataSource = this.categoryBindingSource;
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.radMultiColumnComboBox1.EditorControl.Name = "NestedRadGridView";
+            this.radMultiColumnComboBox1.EditorControl.ReadOnly = true;
+            this.radMultiColumnComboBox1.EditorControl.ShowGroupPanel = false;
+            this.radMultiColumnComboBox1.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.radMultiColumnComboBox1.EditorControl.TabIndex = 0;
+            this.radMultiColumnComboBox1.Location = new System.Drawing.Point(327, 13);
+            this.radMultiColumnComboBox1.Name = "radMultiColumnComboBox1";
+            // 
+            // 
+            // 
+            this.radMultiColumnComboBox1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
+            this.radMultiColumnComboBox1.Size = new System.Drawing.Size(275, 24);
+            this.radMultiColumnComboBox1.TabIndex = 0;
+            this.radMultiColumnComboBox1.TabStop = false;
+            this.radMultiColumnComboBox1.ValueMember = "Id";
             // 
             // radRibbonBar2
             // 
@@ -638,7 +718,7 @@
             // 
             // 
             this.radRibbonBar2.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radRibbonBar2.Size = new System.Drawing.Size(1934, 185);
+            this.radRibbonBar2.Size = new System.Drawing.Size(1727, 167);
             this.radRibbonBar2.StartButtonImage = null;
             this.radRibbonBar2.TabIndex = 1;
             this.radRibbonBar2.Text = "思想管理软件";
@@ -1230,100 +1310,20 @@
             this.radButtonElement4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.radButtonElement4.Visibility = Telerik.WinControls.ElementVisibility.Visible;
             // 
-            // radMultiColumnComboBox1
-            // 
-            this.radMultiColumnComboBox1.DataSource = this.categoryBindingSource;
-            this.radMultiColumnComboBox1.DisplayMember = "CategoryName";
-            // 
-            // radMultiColumnComboBox1.NestedRadGridView
-            // 
-            this.radMultiColumnComboBox1.EditorControl.BackColor = System.Drawing.SystemColors.Window;
-            this.radMultiColumnComboBox1.EditorControl.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radMultiColumnComboBox1.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radMultiColumnComboBox1.EditorControl.Location = new System.Drawing.Point(0, 0);
-            // 
-            // 
-            // 
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowAddNewRow = false;
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowCellContextMenu = false;
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewTextBoxColumn4.FieldName = "CategoryName";
-            gridViewTextBoxColumn4.HeaderText = "CategoryName";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "CategoryName";
-            gridViewDecimalColumn4.DataType = typeof(int);
-            gridViewDecimalColumn4.FieldName = "Id";
-            gridViewDecimalColumn4.HeaderText = "Id";
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.Name = "Id";
-            gridViewDecimalColumn5.DataType = typeof(int);
-            gridViewDecimalColumn5.FieldName = "PId";
-            gridViewDecimalColumn5.HeaderText = "PId";
-            gridViewDecimalColumn5.IsAutoGenerated = true;
-            gridViewDecimalColumn5.Name = "PId";
-            gridViewDateTimeColumn2.FieldName = "DateCreated";
-            gridViewDateTimeColumn2.HeaderText = "DateCreated";
-            gridViewDateTimeColumn2.IsAutoGenerated = true;
-            gridViewDateTimeColumn2.Name = "DateCreated";
-            gridViewDecimalColumn6.DataType = typeof(int);
-            gridViewDecimalColumn6.FieldName = "Id2";
-            gridViewDecimalColumn6.HeaderText = "Id2";
-            gridViewDecimalColumn6.IsAutoGenerated = true;
-            gridViewDecimalColumn6.Name = "Id2";
-            gridViewTextBoxColumn5.DataType = typeof(System.Collections.Generic.IList<ThinkManage.ThinkContents>);
-            gridViewTextBoxColumn5.FieldName = "ThinkContents";
-            gridViewTextBoxColumn5.HeaderText = "ThinkContents";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "ThinkContents";
-            gridViewTextBoxColumn5.ReadOnly = true;
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn4,
-            gridViewDecimalColumn4,
-            gridViewDecimalColumn5,
-            gridViewDateTimeColumn2,
-            gridViewDecimalColumn6,
-            gridViewTextBoxColumn5});
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.DataSource = this.categoryBindingSource;
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.EnableGrouping = false;
-            this.radMultiColumnComboBox1.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.radMultiColumnComboBox1.EditorControl.Name = "NestedRadGridView";
-            this.radMultiColumnComboBox1.EditorControl.ReadOnly = true;
-            this.radMultiColumnComboBox1.EditorControl.ShowGroupPanel = false;
-            this.radMultiColumnComboBox1.EditorControl.Size = new System.Drawing.Size(240, 150);
-            this.radMultiColumnComboBox1.EditorControl.TabIndex = 0;
-            this.radMultiColumnComboBox1.Location = new System.Drawing.Point(327, 13);
-            this.radMultiColumnComboBox1.Name = "radMultiColumnComboBox1";
-            // 
-            // 
-            // 
-            this.radMultiColumnComboBox1.RootElement.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.WrapAroundChildren;
-            this.radMultiColumnComboBox1.Size = new System.Drawing.Size(275, 27);
-            this.radMultiColumnComboBox1.TabIndex = 0;
-            this.radMultiColumnComboBox1.TabStop = false;
-            this.radMultiColumnComboBox1.ValueMember = "Id";
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(ThinkManage.Category);
-            // 
-            // thinkContentsBindingSource
-            // 
-            this.thinkContentsBindingSource.DataSource = typeof(ThinkManage.ThinkContents);
-            // 
             // thinkContentsBindingSource6
             // 
             this.thinkContentsBindingSource6.DataSource = typeof(ThinkManage.ThinkContents);
             // 
             // ThinkManageMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1934, 1094);
+            this.ClientSize = new System.Drawing.Size(1727, 946);
             this.Controls.Add(this.radPanel1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radRibbonBar2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ThinkManageMain";
             // 
             // 
@@ -1333,6 +1333,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ThinkManageMain_FormClosed);
             this.Load += new System.EventHandler(this.ThinkManageMain_Load);
             this.Leave += new System.EventHandler(this.ThinkManageMain_Leave);
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer1)).EndInit();
             this.documentContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip1)).EndInit();
@@ -1343,18 +1344,19 @@
             this.radPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radDock1)).EndInit();
             this.radDock1.ResumeLayout(false);
-            this.documentWindow4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).EndInit();
-            this.toolTabStrip4.ResumeLayout(false);
             this.toolWindow7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radTreeView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip4)).EndInit();
+            this.toolTabStrip4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
             this.radSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentContainer2)).EndInit();
             this.documentContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentTabStrip2)).EndInit();
             this.documentTabStrip2.ResumeLayout(false);
+            this.documentWindow4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolTabStrip2)).EndInit();
             this.toolTabStrip2.ResumeLayout(false);
             this.toolWindow8.ResumeLayout(false);
@@ -1362,10 +1364,8 @@
             this.radPageView1.ResumeLayout(false);
             this.radPageViewPage3.ResumeLayout(false);
             this.radPageViewPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radMultiColumnComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thinkContentsBindingSource6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);

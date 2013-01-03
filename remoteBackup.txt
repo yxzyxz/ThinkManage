@@ -1,0 +1,3 @@
+origin
+git@github.com:yxzyxz/ThinkManage
+C:/Users/Administrator/.ssh/git.ppk
